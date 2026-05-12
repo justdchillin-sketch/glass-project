@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism UI | Modern Design Showcase</title>
+    <meta name="description" content="Explore the beauty of Glassmorphism. A modern UI design showcase featuring frosted glass effects, smooth animations, and responsive components.">
+    <meta name="keywords" content="Glassmorphism, UI Design, CSS, Backdrop-filter, Web Design, Frontend">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button id="lightbox-close" class="lightbox-close"><i data-lucide="x"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Full View">
+        </div>
+    </div>
+
+    <div class="background-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo" id="nav-logo">GLASS.UI</div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-item active" data-page="home">Home</a></li>
+          <li><a href="#showcase" class="nav-item" data-page="showcase">Showcase</a></li>
+          <li><a href="#components" class="nav-item" data-page="components">Library</a></li>
+          <li><a href="#contact" class="nav-item" data-page="contact">Connect</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">
+          <i data-lucide="moon"></i>
+          <span>Dark Mode</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="content-area">
+      <!-- Home Page -->
+      <section id="home" class="page active">
+        <div class="hero">
+          <h1 class="reveal">Elevate Digital<br>Experiences.</h1>
+          <p class="reveal">A high-performance design system built on transparency, light, and depth. Craft premium interfaces that feel as good as they look.</p>
+          <div class="hero-actions reveal">
+            <button class="cta-button" id="cta-showcase" onclick="navigateTo('showcase')">View Showcase</button>
+            <button class="cta-button secondary" id="cta-library" onclick="navigateTo('components')">Explore Library</button>
+            <button class="cta-button ghost" id="cta-contact" onclick="navigateTo('contact')">Connect Now</button>
+          </div>
+        </div>
+
+        <!-- New Home Content: Video Demo -->
+        <div class="glass-card reveal" style="max-width: 1000px; margin: 4rem auto; padding: 1rem; aspect-ratio: 16/9;">
+           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Design Principles" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style="border-radius: 12px;"></iframe>
+        </div>
+      </section>
+
+      <!-- Showcase Page -->
+      <section id="showcase" class="page">
+        <div class="section-title">
+          <h2>Visual Gallery</h2>
+          <p>Immersive imagery meeting frosted glass aesthetics.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="glass-card reveal showcase-item" style="padding: 0;">
+            <img src="https://picsum.photos/id/10/600/400" alt="Nature Blur" class="lightbox-trigger" style="width:100%; border-radius: 24px 24px 0 0; cursor: pointer;">
+            <div style="padding: 1.5rem;">
+                <h3>Nature Blur</h3>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">Exploring natural transparencies.</p>
+            </div>
+            <div class="item-overlay">
+                <p>Click to Expand View</p>
+            </div>
+          </div>
+          <div class="glass-card reveal showcase-item" style="padding: 0;">
+            <img src="https://picsum.photos/id/20/600/400" alt="Tech Depth" class="lightbox-trigger" style="width:100%; border-radius: 24px 24px 0 0; cursor: pointer;">
+            <div style="padding: 1.5rem;">
+                <h3>Tech Depth</h3>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">The future of computer interfaces.</p>
+            </div>
+            <div class="item-overlay">
+                <p>Click to Expand View</p>
+            </div>
+          </div>
+          <div class="glass-card reveal showcase-item" style="padding: 0;">
+            <img src="https://picsum.photos/id/30/600/400" alt="Glass Edges" class="lightbox-trigger" style="width:100%; border-radius: 24px 24px 0 0; cursor: pointer;">
+            <div style="padding: 1.5rem;">
+                <h3>Glass Edges</h3>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">Architectural precision in UI.</p>
+            </div>
+            <div class="item-overlay">
+                <p>Click to Expand View</p>
+            </div>
+          </div>
+          <div class="glass-card reveal showcase-item" style="padding: 0;">
+            <img src="https://picsum.photos/id/40/600/400" alt="Organic Frost" class="lightbox-trigger" style="width:100%; border-radius: 24px 24px 0 0; cursor: pointer;">
+            <div style="padding: 1.5rem;">
+                <h3>Organic Frost</h3>
+                <p style="font-size: 0.8rem; color: var(--text-secondary);">Soft textures and smooth blurs.</p>
+            </div>
+            <div class="item-overlay">
+                <p>Click to Expand View</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Library Page (Advanced Layout) -->
+      <section id="components" class="page">
+        <div class="section-title">
+          <h2>Design Library</h2>
+          <p>Search and click components to preview implementation code.</p>
+        </div>
+        
+        <div class="library-layout">
+          <div class="glass-card reveal library-sidebar">
+            <div class="search-container">
+                <div class="glass-input-wrapper">
+                    <input type="text" id="lib-search" placeholder="Filter..." class="glass-input">
+                    <i data-lucide="search" class="input-icon"></i>
+                    <button id="clear-search" class="clear-btn"><i data-lucide="x"></i></button>
+                </div>
+            </div>
+
+            <div id="searchable-list" class="search-list">
+                <div class="search-item clickable" data-tags="button primary action" data-id="primary-btn">Primary Action Button</div>
+                <div class="search-item clickable" data-tags="input text field border" data-id="glass-input">Premium Glass Input</div>
+                <div class="search-item clickable" data-tags="checkbox toggle switch" data-id="glass-switch">Frosted Toggle</div>
+                <div class="search-item clickable" data-tags="card feature container" data-id="glass-card">Information Glass Card</div>
+                <div class="search-item clickable" data-tags="spinner loading activity" data-id="glass-loader">Fluid activity loader</div>
+            </div>
+          </div>
+
+          <div class="library-preview">
+              <div class="glass-card reveal" id="preview-area" style="min-height: 400px; display: flex; flex-direction: column;">
+                  <div id="preview-render" class="preview-render" style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+                      <p style="opacity: 0.5;">Select a component to preview its functionality</p>
+                  </div>
+                  <div class="code-block" style="margin-top: auto; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+                      <div class="code-header">
+                        <span id="code-label">REUSABLE SNIPPET</span>
+                        <button id="copy-btn" class="copy-btn">Copy</button>
+                      </div>
+                      <pre id="css-code"><code><span class="code-selector">/* Click a list item to fetch design code */</span></code></pre>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="glass-card reveal" style="margin-top: 2rem;">
+            <h3>Interactive Playground</h3>
+            <div class="demo-grid" style="margin-top: 1.5rem;">
+                <div class="demo-box">
+                    <div class="orb-container"><div class="glass-orb"></div></div>
+                    <p style="font-size: 0.7rem; margin-top: 1rem;">Ray-traced Orb</p>
+                </div>
+                <div class="demo-box">
+                    <div class="dice-container" id="dice-roll"><div class="dice-face" id="dice-val">1</div></div>
+                    <p style="font-size: 0.7rem; margin-top: 1rem;">Click to Roll</p>
+                </div>
+                <div class="demo-box">
+                    <div class="coin"><div class="coin-shine"></div></div>
+                    <p style="font-size: 0.7rem; margin-top: 1rem;">Sparkling Coin</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Contact Page -->
+      <section id="contact" class="page">
+        <div class="section-title">
+          <h2>Start a Project</h2>
+          <p>Fill out the form below to initiate a premium consultation.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="glass-card reveal">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label>Full Name <span class="hint" id="name-hint">Min 3 chars</span></label>
+                        <input type="text" id="form-name" class="glass-input" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Business Email <span class="hint" id="email-hint">Must be @company.com</span></label>
+                        <input type="email" id="form-email" class="glass-input" placeholder="email@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Project Details <span class="hint" id="msg-hint">Min 20 chars</span></label>
+                        <textarea id="form-message" class="glass-input" rows="4" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="cta-button primary disabled" style="width: 100%;" disabled>Send Inquiry</button>
+                </form>
+            </div>
+            
+            <div class="contact-info reveal">
+                <div class="glass-card">
+                    <h3>Contact Channels</h3>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
+                        Connect via our verified social signatures:
+                    </p>
+                    <div class="social-grid">
+                        <a href="https://twitter.com" target="_blank" class="cta-button secondary" id="link-twitter" title="Follow on Twitter" style="width: 100%; padding: 0.8rem;">
+                            <i data-lucide="twitter"></i> Twitter Handle
+                        </a>
+                        <a href="https://github.com" target="_blank" class="cta-button secondary" id="link-github" title="View Source on GitHub" style="width: 100%; padding: 0.8rem;">
+                            <i data-lucide="github"></i> GitHub Profile
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="cta-button secondary" id="link-insta" title="Explore on Instagram" style="width: 100%; padding: 0.8rem;">
+                            <i data-lucide="instagram"></i> Instagram Feed
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Success Page -->
+      <section id="success" class="page">
+        <div class="hero">
+            <div style="background: var(--blob-3); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: white;">
+                <i data-lucide="check" size="48"></i>
+            </div>
+          <h1>Inquiry Received.</h1>
+          <p>Your message has been securely delivered to our design team. We typically respond within 12 business hours.</p>
+          <div class="hero-actions">
+            <button class="cta-button primary" onclick="navigateTo('home')">Return Home</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="#"><i data-lucide="twitter"></i></a>
+        <a href="#"><i data-lucide="github"></i></a>
+        <a href="#"><i data-lucide="framer"></i></a>
+      </div>
+      <p>&copy; 2026 GLASS.UI Design Showcase. Built with passion.</p>
+    </footer>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
+
